@@ -17,3 +17,8 @@ output "ssh_command" {
   description = "Command to SSH into the instance"
   value       = "ssh -i ssh_key ec2-user@${aws_instance.web.public_ip}"
 } 
+
+output "ssh_command_dns" {
+  description = "Command to SSH into the instance"
+  value       = "ssh -i ssh_key ec2-user@${aws_instance.web.public_dns}"
+}
